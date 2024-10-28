@@ -1,0 +1,894 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from www.splitwise.com/calculators/travel by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 28 Oct 2024 12:55:47 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+  <meta charset="utf-8">
+  <meta name="referrer" content="origin">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="msvalidate.01" content="39243DCB8F230ED2C4AB28BCED6E069D">
+  <link rel="apple-touch-icon-precomposed" href="../assets/logo_large.png">
+  <title>Travel calculator :: Splitwise</title>
+  <meta name="description" content="How should you and your friends split expenses when vacationing together?">
+  <meta name="apple-itunes-app" content="app-id=458023433, app-argument=splitwise://open">
+  <link rel="canonical" href="travel.html">
+  <!-- <meta name="viewport" content="width=device-width,initial-scale=1"> -->
+  <link rel="stylesheet" href="https://assets.splitwise.com/assets/less/bootstrap-2e2ef392a16f2b09e3186627fcb8a67743a98e458316950369a0619a2c1e72aa.css" />
+<link rel="stylesheet" href="https://assets.splitwise.com/assets/simplemodal-bbf9997bb1ca6107280eb705330f0895c58e8346a3ca2c67b115676289b6fa9a.css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+  <script src="https://assets.splitwise.com/assets/jquery.tooltip-8354ae65c0348a160ed166caf9dfed058eb0f4a91e1dfdbd9d6e9ff149ce870b.js"></script>
+<script src="https://assets.splitwise.com/assets/rails-c089968891739babf1ecbd30acd6da69d4d697ab93dbf602eb559dcc27b5045f.js"></script>
+<script src="https://assets.splitwise.com/assets/bootstrap/bootstrap-modal-64f11e41a81cd6b12d1f36a625fb8fa6fe781e09c6d58f17f98f7a24d0bb694a.js"></script>
+<script src="https://assets.splitwise.com/assets/bootstrap/bootstrap-twipsy-87c81ac87144f090837ad77ccaad0b391875923c5bf94deb56e02e764dfae372.js"></script>
+<script src="https://assets.splitwise.com/assets/bootstrap/bootstrap-popover-b1297c39a8861e1a4910add36d76863b011c19e412a29389b5878fdd474c262a.js"></script>
+<script src="https://assets.splitwise.com/assets/bootstrap/jquery.placeholder-872796542f0eceaea709c6cef79cc86bb7d4c5f72fabbff16d80f85471d62bb8.js"></script>
+<script src="https://assets.splitwise.com/assets/nested_form-dc44acd2855f8b5289685d1abec77c25d7dae77ded5fa9745288e83c35df1fd4.js"></script>
+  
+  <script src="https://assets.splitwise.com/assets/boilerplate-704f4742daadb133748aa93e789c6067f00a38db3ef8368d7bd459e1e339d886.js"></script>
+  <meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="MaIXxWj4O0G1ET2sgV9jvLVNbS9qms_oDg513kOJnNPUMEtDYKZmlm0PIGm5hdbkISegEgemEBPuSPF2UpyZPg" />
+    <meta property="og:title" content="The Splitwise travel calculator">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.splitwise.com/calculators/travel">
+  <meta property="og:image" content="https://www.splitwise.com/assets/boilerstrap/icons/travel_256.png">
+  <meta property="og:site_name" content="Splitwise">
+  <meta property="fb:admins" content="1243410014">
+
+  
+</head>
+<body>
+  <div id="big_container">
+    <div id="page-group">
+      <header>
+        <div class="fill">
+          <div class="container">
+            <h3><a href="../index.html"><img alt="Splitwise" id="logo" src="https://assets.splitwise.com/assets/logo-c86605e7be58c2d06901ba3924d452724506079a5ec665b9a305edbd908b22b1.png" /></a></h3>
+            <ul class="nav">
+              <li >
+                <a href="../index.html">Home</a>
+              </li>
+              <li class=&#39;active&#39;>
+                <a href="../calculators.html">Calculators</a>
+              </li>
+              <li><a href="https://blog.splitwise.com/">Blog</a></li>
+              <li ><a href="../contact.html">Contact</a></li>
+            </ul>
+
+            <ul class="nav secondary-nav">
+                <li class="button" id="login-menu">
+                  <a href="../login.html">
+                    <small>Already use Splitwise?</small>
+                    <strong>Log in</strong>
+                  </a>
+                </li>
+
+            </ul>
+          </div>
+        </div>
+      </header>
+
+
+      <div id="main" role="main">
+        <link rel="stylesheet" href="https://assets.splitwise.com/assets/calculators-be291a983b9b009f5bc55ef541cea2ead65472b5f6ea54347b8ccdf121d0e068.css" />
+
+
+<script>
+var ShareThisLink = {
+    shorten : function(e) {
+        // this stops the click, which will later be handled in the response method
+        e.preventDefault();
+        // find the link starting at the second 'http://'
+        var url = OutputURLVars();
+        $("#outputlink").val(url);
+    }
+}
+
+
+
+
+// this is cool if you are adding links to dom on the fly
+//jQuery('.tweetlink').live('click', ShareThisLink.shorten);
+</script>
+
+
+
+<script type="text/javascript">
+
+var isMouseDown = false;
+
+function GetUrlVars()
+{
+    var vars = [], hash;
+    var hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
+    for(var i = 0; i < hashes.length; i++)
+    {
+        hash = hashes[i].split('=');
+        vars.push(hash[0]);
+        vars[hash[0]] = hash[1];
+    }
+    return vars;
+}
+
+function Money( amt )
+{
+  amt = Math.round( amt * 100.0 );
+  if ( amt < 10 ) return "0.0" + amt;
+  if ( amt < 100 ) return "0." + amt;
+  amt = amt + ''; //
+  return amt.substring(0,amt.length-2) + "." + amt.substring(amt.length-2);
+}
+
+function OutputURLVars()
+{
+  OutputRows = row_num-2;
+  OutputCols = cell_num-2;
+  OutputPrice = parseFloat($("#price").val());
+  OutputTableState = "";
+
+  if(isNaN(OutputPrice))
+  {
+    OutputPrice = 0;
+  }
+  OutputMethod = $('input[name=calc-type]:checked', '#BigForm').val();
+
+  for(r = 2; r <= OutputRows+1; r++)
+  {
+    for(c = 2; c <= OutputCols+1; c++)
+    {
+      if ($("tr:nth-child("+(r+'')+") td:nth-child("+(c+'')+")").data('State')==0)
+        OutputTableState += "0";
+      else if ($("tr:nth-child("+(r+'')+") td:nth-child("+(c+'')+")").data('State')==1)
+        OutputTableState += "1";
+      else
+        OutputTableState += "X";
+    }
+    //OutputTableState += ",";
+  }
+
+  OutputNameArray="";
+
+  for(r = 1; r <=OutputRows; r++)
+  {
+    OutputNameArray+=escape($('#PersonName'+r.toString()).val());
+    if(r!=OutputRows)
+      OutputNameArray+=",";
+  }
+
+  return("https://www.splitwise.com/calculators/travel?"+"OR=" + OutputRows + "&" + "OC=" + OutputCols + "&" + "OP=" + OutputPrice + "&" + "OM=" + OutputMethod + "&" + "T=" + OutputTableState + "&NA=" + OutputNameArray);
+}
+
+function ParseHash()
+{
+  var vars = GetUrlVars();
+  if(vars['OC']>0)
+    $('#nights').val(vars['OC']+"");
+  if(vars['OR']>0)
+  {
+    //alert(vars['OR']+"");
+    //alert($('#people').val());
+    $('#people').val(vars['OR']+"");
+  }
+  if(parseInt(vars['OP'])>0)
+    $("#price").val(vars['OP']+"");
+  if(vars['OM'])
+  {
+    //alert($("#calc-type").val());
+    //alert(vars['OM']);
+    $("[name=calc-type]").filter("[value="+vars['OM']+"]").attr("checked","checked");
+  }
+
+  createSelectionTableFromForm();
+
+  if(vars['NA'])
+  {
+    var allnames = vars['NA'].split(',');
+
+    for(r = 2; r <= row_num - 1; r++)
+    {
+      if(allnames[r-2])
+      {
+        //alert("r=" + r + ", " + unescape(allnames[r-2]));
+        $('#PersonName'+(r-1).toString()).val(unescape(allnames[r-2]));
+      }
+    }
+  }
+
+  allsum = 0;
+
+  if(vars['T'])
+  {
+    tot=0;
+    for(r = 2; r <= parseInt(vars['OR'])+1; r++)
+    {
+      for(c = 2; c <= parseInt(vars['OC'])+1; c++)
+      {
+        selected=parseInt(vars["T"].substring(tot, tot+1));
+        $("tr:nth-child("+(r+'')+") td:nth-child("+(c+'')+")").data('State',selected);
+        if(selected==1)
+        {
+          $("tr:nth-child("+(r+'')+") td:nth-child("+(c+'')+")").css({backgroundColor:'#6F94D1'});
+          allsum++;
+        }
+        tot++;
+      }
+      //OutputTableState += ",";
+    }
+  }
+
+  for(r = 2; r <= parseInt(vars['OR'])+1; r++)
+  {
+    rowsum=0;
+    for(c = 2; c <= parseInt(vars['OC'])+1; c++)
+    {
+      if($("tr:nth-child("+(r+'')+") td:nth-child("+(c+'')+")").data('State')==1)
+        rowsum++;
+    }
+    $("tr:nth-child("+r+") td:nth-child("+(1+'')+")").data('RowSum',rowsum)
+    //OutputTableState += ",";
+  }
+  for(c = 2; c <= parseInt(vars['OC'])+1; c++)
+  {
+    colsum=0;
+    for(r = 2; r <= parseInt(vars['OR'])+1; r++)
+    {
+      if($("tr:nth-child("+(r+'')+") td:nth-child("+(c+'')+")").data('State')==1)
+        colsum++;
+    }
+    $("tr:nth-child("+(1+'')+") td:nth-child("+(c+'')+")").data('ColSum',colsum)
+    //OutputTableState += ",";
+  }
+  $("tr:nth-child("+(1+'')+") td:nth-child("+(1+'')+")").data('TotalSum',allsum)
+
+  UpdateTable(allsum, parseFloat(vars['OP']), row_num);
+}
+
+function UpdateTable(myCurrTotalSum, myPrice, row_num)
+{
+  //myblah = $("tr:nth-child(3) td:nth-child(1)").data('RowSum');
+  //alert(myblah);
+  //  myShare = myblah*1.0/(myCurrTotalSum*1.0)*(myPrice*1.0);
+  //  myPrintShare = Money(myShare);
+  //  $("tr:nth-child(3) td:nth-child("+(cell_num+'')+")").text(myPrintShare);
+  //myCurrentRowSum = 0;
+
+
+  myType = $('input[name=calc-type]:checked', '#BigForm').val();
+  myPeopleInvolved = 0;
+
+  var PerNight = new Array(row_num);
+
+  if(myCurrTotalSum!=0)
+  {
+    if(myType == "EachNight")
+    {
+      for(r = 2; r <= row_num-1; r++)
+      {
+        PerNight[r] = 0;
+      }
+
+      for(c = 2; c<= cell_num-1;c++)
+      {
+        myCurrColSum = $("tr:nth-child("+(1+'')+") td:nth-child("+c+")").data('ColSum');
+        for(r = 2; r <= row_num-1; r++)
+        {
+          if (myCurrColSum == 0)
+          {
+            myTempShare = (myPrice*1.0)/(cell_num-2.0)/(row_num-2.0);
+          }
+          else if($("tr:nth-child("+(r+'')+") td:nth-child("+(c+'')+")").data('State') == 1)
+          {
+            myTempShare = (myPrice*1.0)/(cell_num-2.0)/(myCurrColSum*1.0);
+          }
+          else
+          {
+            myTempShare = 0;
+          }
+          PerNight[r] += myTempShare;
+        }
+      }
+    }
+
+    for(r = 2; r <= row_num-1; r++)
+    {
+      //alert("r="+(r+'')+"myPrice="+(myPrice+'')+"myCurrTotalSum"+(myCurrTotalSum+''));
+      myCurrentRowSum = $("tr:nth-child("+r+") td:nth-child("+(1+'')+")").data('RowSum');
+      if(myCurrentRowSum == (cell_num-2)) //everything is selected
+      {
+        $('#RowCheckbox'+(r+'')).prop("checked",true);
+      }
+      else
+      {
+        $('#RowCheckbox'+(r+'')).prop("checked",false);
+      }
+      //alert("myCurrentRowSum="+(myCurrentRowSum+''));
+      if(myType == "Equal" && myCurrentRowSum > 0)
+      {
+        myPeopleInvolved++;
+      }
+      else if(myType == "PersonNight")
+      {
+        myShare = (myCurrentRowSum*1.0)/(myCurrTotalSum*1.0)*(myPrice*1.0);
+        myPrintShare = Money(myShare);
+        $("tr:nth-child("+r+") td:nth-child("+(cell_num+'')+")").text("$"+myPrintShare);
+      }
+      else if(myType == "EachNight")
+      {
+        myShare = PerNight[r];
+        myPrintShare = Money(myShare);
+        $("tr:nth-child("+r+") td:nth-child("+(cell_num+'')+")").text("$"+myPrintShare);
+      }
+    }
+    if(myType == "Equal")
+    {
+      for(r = 2; r <= row_num-1; r++)
+      {
+        myCurrentRowSum = $("tr:nth-child("+r+") td:nth-child("+(1+'')+")").data('RowSum');
+        if(myCurrentRowSum > 0)
+        {
+          myShare = (myPrice*1.0)/(myPeopleInvolved*1.0);
+          myPrintShare = Money(myShare);
+          $("tr:nth-child("+r+") td:nth-child("+(cell_num+'')+")").text("$"+myPrintShare);
+        }
+        else
+        {
+          $("tr:nth-child("+r+") td:nth-child("+(cell_num+'')+")").text("$0.00");
+        }
+      }
+    }
+  }
+  else
+  {
+    for(r = 2; r <= row_num-1; r++)
+    {
+      $("tr:nth-child("+r+") td:nth-child("+(cell_num+'')+")").text("$0.00");
+    }
+  }
+}
+
+function UpdatePrice()
+{
+  currTotalSum = $("tr:nth-child("+(1+'')+") td:nth-child("+(1+'')+")").data('TotalSum');
+  Price = parseFloat($("#price").val());
+  if(isNaN(Price))
+  {
+    Price = 0;
+  }
+  UpdateTable(currTotalSum, Price, row_num);
+}
+
+function UpdateCalcType()
+{
+  currTotalSum = $("tr:nth-child("+(1+'')+") td:nth-child("+(1+'')+")").data('TotalSum');
+  Price = parseFloat($("#price").val());
+  if(isNaN(Price))
+  {
+    Price = 0;
+  }
+  UpdateTable(currTotalSum, Price, row_num);
+}
+
+function SelectRow( r )
+{
+  lastcol = cell_num;
+  lastrow = row_num;
+  currRowSum = $("tr:nth-child("+(r+'')+") td:nth-child("+(1+'')+")").data('RowSum');
+  currTotalSum = $("tr:nth-child("+(1+'')+") td:nth-child("+(1+'')+")").data('TotalSum');
+  Price = parseFloat($("#price").val());
+  if(isNaN(Price))
+  {
+    Price = 0;
+  }
+  for(c = 2; c <= cell_num-1; c++)
+  {
+    currColSum = $("tr:nth-child("+(1+'')+") td:nth-child("+(c+'')+")").data('ColSum');
+    tempState = $("tr:nth-child("+(r+'')+") td:nth-child("+(c+'')+")").data('State');
+    if(tempState == 0)
+    {
+        $("tr:nth-child("+(r+'')+") td:nth-child("+(c+'')+")").css({backgroundColor:'#6F94D1'});
+        $("tr:nth-child("+(r+'')+") td:nth-child("+(c+'')+")").data('State', 1);
+        currRowSum++;
+        currColSum++;
+        currTotalSum++;
+        $("tr:nth-child("+(1+'')+") td:nth-child("+(c+'')+")").data('ColSum',currColSum);
+    }
+
+    else
+    {
+    }
+  }
+  $("tr:nth-child("+(r+'')+") td:nth-child("+(1+'')+")").data('RowSum', currRowSum);
+  $("tr:nth-child("+(1+'')+") td:nth-child("+(1+'')+")").data('TotalSum', currTotalSum);
+
+  UpdateTable(currTotalSum, Price, row_num);
+}
+
+function UnselectRow( r )
+{
+  lastcol = cell_num;
+  lastrow = row_num;
+  currRowSum = $("tr:nth-child("+(r+'')+") td:nth-child("+(1+'')+")").data('RowSum');
+  currTotalSum = $("tr:nth-child("+(1+'')+") td:nth-child("+(1+'')+")").data('TotalSum');
+  Price = parseFloat($("#price").val());
+  if(isNaN(Price))
+  {
+    Price = 0;
+  }
+  for(c = 2; c <= cell_num-1; c++)
+  {
+    currColSum = $("tr:nth-child("+(1+'')+") td:nth-child("+(c+'')+")").data('ColSum');
+    tempState = $("tr:nth-child("+(r+'')+") td:nth-child("+(c+'')+")").data('State');
+    if(tempState == 1)
+    {
+        $("tr:nth-child("+(r+'')+") td:nth-child("+(c+'')+")").css({backgroundColor:'white'});
+        $("tr:nth-child("+(r+'')+") td:nth-child("+(c+'')+")").data('State', 0);
+        currRowSum--;
+        currColSum--;
+        currTotalSum--;
+        $("tr:nth-child("+(1+'')+") td:nth-child("+(c+'')+")").data('ColSum',currColSum);
+    }
+
+    else
+    {
+    }
+  }
+  $("tr:nth-child("+(r+'')+") td:nth-child("+(1+'')+")").data('RowSum', currRowSum);
+  $("tr:nth-child("+(1+'')+") td:nth-child("+(1+'')+")").data('TotalSum', currTotalSum);
+
+  UpdateTable(currTotalSum, Price, row_num);
+}
+
+function ToggleRow( r )
+{
+  currRowSum = $("tr:nth-child("+(r+'')+") td:nth-child("+(1+'')+")").data('RowSum');
+  if(currRowSum == cell_num-2)
+  {
+    UnselectRow(r);
+  }
+  else
+  {
+    SelectRow(r);
+  }
+}
+
+function LoadBasics()
+//This function should load with the page. It makes the table unselectable and gives a way to see if the mouse is up or not.
+{
+
+  // $(document).ready(function() {
+  //   isMouseDown = false;
+
+  //   $('body').mousedown(function() {
+  //     alert('test');
+  //     isMouseDown = true;
+  //   }).mouseup(function() {
+  //     isMouseDown = false;
+  //   });
+  // });
+
+  //$(document).attr('unselectable','on').css('MozUserSelect','none').css('webkit-user-select','none').css('khtml-user-select','none');
+  //$('td').attr('unselectable','on').css('MozUserSelect','none').css('webkit-user-select','none').css('khtml-user-select','none');
+  //$('table').attr('unselectable','on').css('MozUserSelect','none').css('webkit-user-select','none').css('khtml-user-select','none');
+
+  CreateNights(14);
+  CreatePeople(50);
+  ParseHash();
+  jQuery('.tweetlink').bind('click', ShareThisLink.shorten);
+
+  $('body').mousedown(function() {
+    // alert('test');
+    isMouseDown = true;
+  }).mouseup(function() {
+    isMouseDown = false;
+  });
+  //createSelectionTableFromForm();
+  //$(document).disableSelection();
+  //$('td').disableSelection();
+  //$('table').disableSelection();
+
+  //$('input').attr('unselectable','on').css('MozUserSelect','none').css('webkit-user-select','none').css('khtml-user-select','none');
+}
+
+function CreateNights(maxNights)
+{
+  toAppend = "";
+  toAppend += "<select id='nights' onchange='createSelectionTableFromForm();'>";
+
+  for(i = 1; i <= maxNights; i++)
+  {
+    if(i==7)
+      toAppend += "<option SELECTED VALUE="+(i+'')+">"+(i+'')+"</option>";
+    else
+      toAppend += "<option VALUE="+(i+'')+">"+(i+'')+"</option>";
+  }
+  toAppend += "</select>";
+
+  $('#nightselector').html(toAppend);
+}
+
+function CreatePeople(maxPeople)
+{
+  toAppend = "";
+  toAppend += "<select id='people' onchange='createSelectionTableFromForm();'>";
+
+  for(i = 1; i <= maxPeople; i++)
+  {
+    if(i==4)
+      toAppend += "<option SELECTED VALUE="+(i+'')+">"+(i+'')+"</option>";
+    else
+      toAppend += "<option VALUE="+(i+'')+">"+(i+'')+"</option>";
+  }
+  toAppend += "</select>";
+
+  $('#peopleselector').html(toAppend);
+}
+
+function createSelectionTableFromForm()
+{
+  createrows = $("#people").val();
+  //alert(createrows+'');
+  createcols = $('#nights').val();
+  //alert("createrows="+(createrows+'')+",createcols="+(createcols+''));
+  makeSelectableTable(createrows/1.0, createcols/1.0, "MainTable");
+}
+
+function makeSelectableTable(rows, cols, TableId)
+//Creates a table with rows x cols data cells, id=TableId, with labels for days and inputs for names, and a "total" row and column at the end.
+{
+
+  $('selectiontable').html("");
+
+  row=new Array();
+  cell=new Array();
+
+  row_num=rows+2; //edit this value to suit
+  cell_num=cols+2; //edit this value to suit
+  //alert("row_num="+(row_num+'')+",cell_num="+(cell_num+''));
+
+  tab=document.createElement('table');
+  tab.setAttribute('id',TableId);
+
+  tbo=document.createElement('tbody');
+
+  for(r=1;r<=row_num;r++)
+  {
+    row[r]=document.createElement('tr');
+
+    for(c=1;c<=cell_num;c++)
+    {
+      cell[c]=document.createElement('td');
+      if(r==1)
+      {
+        if(c!=1 && c!=cell_num)
+        {
+          $(cell[c]).html("Day<br>"+(c-1).toString());
+          $(cell[c]).addClass("ColumnHeader");
+        }
+        else
+        {
+          $(cell[c]).addClass("Blank").css('border','0px').data('TotalSum',0);
+        }
+      }
+      else if(c==1)
+      {
+        if(r!=row_num)
+        {
+          $(cell[c]).css('width','120px')
+          $(cell[c]).append("<INPUT TYPE='TEXT' SIZE=9 id='PersonName" + (r-1).toString() + "' VALUE='Person "+(r-1).toString()+"'> <INPUT type='checkbox' id='RowCheckbox"+(r+'')+"' onclick='ToggleRow("+(r+'')+")'>");
+          $(cell[c]).addClass("RowHeader");
+        }
+        else
+        {
+          $(cell[c]).addClass("Blank").css('border','0px');
+        }
+      }
+      else if(c==cell_num)
+      {
+        if(r!=row_num)
+          //$(cell[c]).addClass("RowSum").css('border','0px');
+          $(cell[c]).addClass("RowSum").css('border','0px').text("$0.00");
+        else
+          $(cell[c]).addClass("GrandTotal").css('border','0px');
+      }
+      else if(r==row_num)
+      {
+        if(c!=cell_num)
+          $(cell[c]).text(" ").addClass("ColSum").css('border','0px');
+        else
+          $(cell[c]).addClass("GrandTotal").css('border','0px');
+          //$(cell[c]).addClass("GrandTotal").css('border','0px').text("0");
+      }
+      else
+      {
+        $(cell[c]).append("&nbsp;").addClass("DataCell");
+        //cell[k].appendChild(cont);
+      }
+      $(cell[c]).data('myRow',r).data('myCol',c);
+      row[r].appendChild(cell[c]);
+    }
+    tbo.appendChild(row[r]);
+  }
+  tab.appendChild(tbo);
+  $('#selectiontable').html(tab);
+  //$('td').text("moosegooees");
+
+  $(".DataCell").data('State',0);
+  $(".RowHeader").css({border:'0px'});
+
+  $(".RowHeader").data('RowSum',0);
+  $(".ColumnHeader").data('ColSum',0);
+
+  $(".DataCell").mouseover(function() {
+    if(isMouseDown)
+    {
+      temprow = $(this).data('myRow')+'';
+      tempcol = $(this).data('myCol')+'';
+      lastcol = cell_num;
+      lastrow = row_num;
+      currRowSum = $("tr:nth-child("+temprow+") td:nth-child("+(1+'')+")").data('RowSum');
+      currColSum = $("tr:nth-child("+(1+'')+") td:nth-child("+tempcol+")").data('ColSum');
+      currTotalSum = $("tr:nth-child("+(1+'')+") td:nth-child("+(1+'')+")").data('TotalSum');
+      Price = parseFloat($("#price").val());
+      if(isNaN(Price))
+      {
+        Price = 0;
+      }
+      if($(this).data('State')==0)
+      {
+        $(this).css({backgroundColor:'#6F94D1'}).data('State', 1);
+        currRowSum++;
+        currColSum++;
+        currTotalSum++;
+      }
+      else
+      {
+        $(this).css({backgroundColor:'white'}).data('State', 0);
+        currRowSum--;
+        currColSum--;
+        currTotalSum--;
+      }
+      $("tr:nth-child("+temprow+") td:nth-child("+(1+'')+")").data('RowSum',currRowSum);
+      $("tr:nth-child("+(1+'')+") td:nth-child("+tempcol+")").data('ColSum',currColSum);
+      //$("tr:nth-child("+temprow+") td:nth-child("+lastcol+")").text((currRowSum)+'');
+      //$("tr:nth-child("+lastrow+") td:nth-child("+tempcol+")").text((currColSum)+'');
+      $("tr:nth-child("+(1+'')+") td:nth-child("+(1+'')+")").data('TotalSum',currTotalSum);
+      //$("tr:nth-child("+lastrow+") td:nth-child("+lastcol+")").text(currTotalSum+'');
+      UpdateTable(currTotalSum, Price, row_num);
+    }
+  });
+
+  $(".DataCell").mousedown(function() {
+      temprow = $(this).data('myRow')+'';
+      tempcol = $(this).data('myCol')+'';
+      lastcol = cell_num;
+      lastrow = row_num;
+      currRowSum = $("tr:nth-child("+temprow+") td:nth-child("+(1+'')+")").data('RowSum');
+      currColSum = $("tr:nth-child("+(1+'')+") td:nth-child("+tempcol+")").data('ColSum');
+      currTotalSum = $("tr:nth-child("+(1+'')+") td:nth-child("+(1+'')+")").data('TotalSum');
+      Price = parseFloat($("#price").val());
+      if(isNaN(Price))
+      {
+        Price = 0;
+      }
+      if($(this).data('State')==0)
+      {
+        $(this).css({backgroundColor:'#6F94D1'}).data('State', 1);
+        currRowSum++;
+        currColSum++;
+        currTotalSum++;
+      }
+      else
+      {
+        $(this).css({backgroundColor:'white'}).data('State', 0);
+        currRowSum--;
+        currColSum--;
+        currTotalSum--;
+      }
+      $("tr:nth-child("+temprow+") td:nth-child("+(1+'')+")").data('RowSum',currRowSum);
+      $("tr:nth-child("+(1+'')+") td:nth-child("+tempcol+")").data('ColSum',currColSum);
+      //$("tr:nth-child("+temprow+") td:nth-child("+lastcol+")").text((currRowSum)+'');
+      //$("tr:nth-child("+lastrow+") td:nth-child("+tempcol+")").text((currColSum)+'');
+      $("tr:nth-child("+(1+'')+") td:nth-child("+(1+'')+")").data('TotalSum',currTotalSum);
+      //$("tr:nth-child("+lastrow+") td:nth-child("+lastcol+")").text(currTotalSum+'');
+      UpdateTable(currTotalSum, Price, row_num);
+  });
+  //$('td').attr('unselectable','on').css('MozUserSelect','none').css('webkit-user-select','none').css('khtml-user-select','none');
+  //$('table').attr('unselectable','on').css('MozUserSelect','none').css('webkit-user-select','none').css('khtml-user-select','none');
+  $('table').attr('unselectable','on').css('webkit-user-select','none').css('khtml-user-select','none');
+  $(document).attr('unselectable','on').css('webkit-user-select','none').css('khtml-user-select','none');
+  $(".ColumnHeader").attr('unselectable','on').css('MozUserSelect','none').css('webkit-user-select','none').css('khtml-user-select','none');
+  $(".DataCell").css('MozUserSelect','none')
+  $("tr").attr('unselectable','on').css('webkit-user-select','none').css('khtml-user-select','none');
+  $("td").attr('unselectable','on').css('webkit-user-select','none').css('khtml-user-select','none');
+  $(".RowSum").css('width', '60px');
+}
+
+</script>
+
+
+
+
+
+
+<style>
+  label{ width: 300px; margin-left: -170px; }
+  ul.inputs-list{ margin-left: 170px;}
+</style>
+
+<div class="container" id="travel-calculator">
+  <div class="row header">
+    <div class="offset2 span3 columns" style="text-align: right">
+      <img src="https://assets.splitwise.com/assets/boilerstrap/icons/travel_256-080a88a04d5b82eadd0abafe6cf2c4301c62e6583e44080e2ef388ac3b9afb8a.png" />
+    </div>
+    <div class="span9 columns">
+      <h1>The Splitwise Travel Calculator</h1>
+      <p>
+        How should you and your friends split the cost of a beach house or a road trip?<br>
+        Use the Splitwise travel calculator to share expenses quickly and fairly.
+      </p>
+    </div>
+
+  </div>
+  <form id="BigForm">
+    <div class="row">
+      <div class="span5 columns">
+        <div class="well">
+          <h4 style="line-height: 1em; margin: -5px 0 10px">Basic info</h4>
+          <div class="clearfix">
+            <label for="">How many nights?</label>
+            <div class="input" id="nightselector"></div>
+          </div>
+          <div class="clearfix">
+            <label for="">How many people?</label>
+            <div class="input" id="peopleselector"></div>
+          </div>
+          <div class="clearfix">
+            <label for="price">Total price of trip</label>
+            <div class="input">
+              $ <input type='text' style="width: 40px" id='price' onkeyup='UpdatePrice()'>
+            </div>
+          </div>
+        </div>
+
+        <div class="well" style="height: 157px">
+          <h4 style="line-height: 1em; margin: -5px 0 5px">Method of calculation</h4>
+
+          <div class="clearfix">
+            <div class="input" style="margin-left: 0">
+              <ul class="inputs-list">
+                <li>
+                  <label>
+                    <INPUT type="radio" id="calc-type" name="calc-type" value="Equal" onClick="UpdateCalcType()">
+                    <span>Each person pays the same</span>
+                    <span class="help-block">
+                      Good for: misc. expenses,
+                      a trip everyone commits to in advance,
+                      a short weekend trip
+                    </span>
+                  </label>
+                </li>
+                <li>
+                  <label>
+                    <INPUT type="radio" id="calc-type" name="calc-type" checked value="PersonNight" onClick="UpdateCalcType()">
+                    <span>Equal nightly rate for everyone</span>
+                    <span class="help-block">
+                      Good for: groceries,
+                      a shared house with a rotating cast of characters,
+                      rentals-by-the-week
+                    </span>
+                  </label>
+                </li>
+                <li>
+                  <label>
+                    <INPUT type="radio" id="calc-type" name="calc-type" value="EachNight" onClick="UpdateCalcType()">
+                    <span>Divvy up each night</span>
+                    <span class="help-block">
+                      Good for: a shared hotel room rented by the night,
+                      rental cars
+                    </span>
+                  </label>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div style="padding: 0 10px 0; margin-top: -2px; font-size: 12px; color: #999; line-height: 14px; text-align: center">
+          Curious how this works? Visit our <a href="https://blog.splitwise.com/">blog</a> to learn more about splitting group travel costs.
+        </div>
+      </div>
+      <div class="span11 columns">
+        <div class="well" style="background-color: #fff; border-color: #ccc">
+          <p style="text-align: center; margin: -10px 0 1em">Click and drag on the table below to select which days people were present:</p>
+          <div id="selectiontable"></div>
+        </div>
+        <div>
+          <div class="span6 columns" style="margin-left: 0">
+            <div class="well" style="height: 133px">
+              <div class="span4 columns" style="padding: 0; margin-left: 0; width: 170px">
+                <h4 style="line-height: 1em; margin: -5px 0 5px">Share your results</h4>
+                <p style="font-size: 12px; margin: 10px 0 10px">
+                  Splitting this bill with friends?<br>
+                  Send them a splt.ws link:
+                </p>
+                <INPUT type="text" id="outputlink" placeholder="(your link will appear here)" value="" size=20 style="width: 158px">
+                <INPUT type="button" style="margin-top: 10px" name="outputbutton" class="tweetlink btn primary" id="outputbutton" value="Generate link" onclick="return false">
+              </div>
+              <div class="span1 columns" style="padding: 0; margin-left: 15px; margin-top: -3px">
+                <iframe src="https://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fsplitwise.com%2Fcalculators%2Ftravel&amp;send=false&amp;layout=box_count&amp;width=100&amp;show_faces=false&amp;action=like&amp;colorscheme=light&amp;font=arial&amp;height=90" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:57px; height:76px;" allowTransparency="true"></iframe>
+                <a href="https://twitter.com/share" class="twitter-share-button" data-text="The Splitwise travel calculator: how should you and your friends split the cost of a trip?" data-count="vertical" data-via="splitwise">Tweet</a><script type="text/javascript" src="https://platform.twitter.com/widgets.js"></script>
+              </div>
+            </div>
+          </div>
+          <div class="span5 columns" style="margin-right: 0">
+            <div class="well" style="height: 133px; font-size: 14px; color: #555; line-height: 130%; border-color: #ccf; background-color: #eef">
+              <img src="../assets/boilerstrap/mastheads/iphone-small.png" style="float: left; margin: 0 20px 0 0; width: 80px; margin-top: -8px">
+              <p style="margin: 4px 0; font-size: 16px">
+                Keep track of all of your group travel expenses for <strong>free</strong> with Splitwise!
+              </p>
+              <a href="../index.html" class="btn large error" style="margin-top: 10px; font-size: 18px">Sign up &raquo;</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>
+
+
+<script>
+LoadBasics();
+</script>
+
+
+      </div>
+    </div>
+
+    <footer>
+      <div class="fill">
+        <div class="container">
+          <div class="row">
+            <div class="span7 columns" id="social">
+              <ul class="nav secondary-nav">
+                <li>
+                  <a href="http://www.facebook.com/splitwise">follow us on Facebook <img src="https://assets.splitwise.com/assets/social/facebook-8755c3830cd00faa5a0658cbbe133834c3e318a280032220c9a24da3c6aaac36.png" /></a>
+                </li>
+                <li><a href="http://twitter.com/splitwise">
+                  follow us on Twitter
+                  <img src="https://assets.splitwise.com/assets/social/twitter-e36aba4e9f396af22a05341bb83e521bc236a21b8e855a555ac7b424b6db44df.png" />
+                </a></li>
+              </ul>
+            </div>
+
+            <div class="span5 columns" id="copyright_info">
+              <div id="copyright">Copyright &copy; 2024 Splitwise. All rights reserved.</div>
+              <span class="links">
+                <a href="https://blog.splitwise.com/">blog</a> |
+                <a href="../terms.html">terms</a> |
+                <a href="../press.html">press</a> |
+                <a href="../about.html">about</a> |
+                <a href="../jobs.html">jobs</a> |
+                <a href="../contact.html">contact us</a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  
+
+    <script>
+      var _gaq=[['_setAccount','UA-22826239-1'],['_trackPageview'],['_trackPageLoadTime']];
+      _gaq.push(['_setCustomVar', 1, 'Signup Week', 'unregistered', 1]);
+      _gaq.push(['_setCustomVar', 2, 'Signup Type', 'unregistered', 1]);
+      _gaq.push(['_setCustomVar', 4, 'Ad source', '', 1]);
+      (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+      g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+      s.parentNode.insertBefore(g,s)}(document,'script'));
+    </script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"rayId":"8d9b135eb9278ad3","serverTiming":{"name":{"cfExtPri":true,"cfL4":true,"cfSpeedBrain":true,"cfCacheStatus":true}},"version":"2024.10.4","token":"d788d0b487f64a4c951cb13fb4a5fadd"}' crossorigin="anonymous"></script>
+</body>
+
+<!-- Mirrored from www.splitwise.com/calculators/travel by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 28 Oct 2024 12:55:47 GMT -->
+</html>
